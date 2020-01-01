@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Git</h1>
+<h3>Git이란?</h3>
+<p>-버전관리 시스템, 파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템</p>
+<p>-원격 저장소와 로컬 저장소에서 파일을 Push, Pull 한다</p>
+<p>-효과적인 협업, 손쉬운 개발 및 테스트 환경 구축, 효율적인 배포관리를 위해 사용</p><br>
+<h3>Git 프로젝트의 3단계</h3>
+<p>-Working Directory, Staging Area, .git directory가 있다.</p>
+<p>-Working Directory에서 작업한 파일을  Staging Area로 파일을 보내 commit을 할 수 있는 상태로 만든다.</p>
+<p>-Staging Area에서 commit을 해서 .git directory로 보낸다.</p>
+<p>-파일을 commit하면 해시가 할당된다</p><br>
+<h3>최초설정</h3>
+<p>-사용자 정보($ git config --global user.name " ", $ git config --global user.email ~)</p>
+<p>-For Windows(편집기 설정: core.edit, 자동 줄바꿈 설정: autocrlf true, 원격 저장소와 로컬 저장소 동기화: prune true)</p>
+<p>-설정이 잘 되었는지 확인($ git config --global --list)</p>
+<p>-Git 내부명령어 확인($ git)</p><br>
+<h3>프로젝트 관리</h3>
+<p>-Git저장소 만들기: 기존 디렉토리를 Git저장소로 만든다($ git init), 기존 저장소를 Clone한다($ git clone)</p>
+<p>-저장소에 저장하기: 파일 상태 확인하기($ git status), Modified 상태의 파일을 Stage하기($ git add), 파일 상태 확인하기($ git status), 변경사항 커밋하기($ git commit)</p>
+<p>-커밋 히스토리 조회하기($ git log)</p>
+<p>-리모트 저장소: 리모트 저장소 추가하기($ git remote add origin), 리모트 저장소에 Push하기($ git push --set --upstream origin master)</p>
+<p>-파일 무시하기($ gitignore)</p>
+<p>-리모트 저장소에서 가지고 오기($ git pull)</p>
+</body>
+</html>

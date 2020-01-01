@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>git정리</title>
+</head>
+<body>
+<h2>2019-12-30-2019-12-31 Git 교육 정리</h2>
+<h4> Git이란? </h4>
+<pre>버전관리 시스템
+(파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템)   
+Git은 분산 버전 관리 시스템(DVCS) : 원격저장소, 로컬저장소 PUSH하고 PULL사용   
+
+ Git : Working Directory -> Staging Area -> .git directory    * commit에서 고유번호 해시가 할당된다.
+ Working Directory에서 파일 수정, Staging Area에 파일 추가 , Staging Area에서 파일 commit
+ </pre>
+<h4>Git 최초 설정 </h4> 
+<pre>
+사용자 정보: git config --global user.name "sumin" 
+          git config --global user.email johndoe@example.com 
+          
+          편집기, 자동 줄바꿈, 원격저장소와 로컬저장소 동기화
+              설정확인 : git config --global --list </pre>
+              
+<h4>명령어</h4>
+<pre>
+저장소만들기
+-init 사용해서 만들기 (기존 디렉토리)
+-clone사용해서 저장소 만들기
+
+파일 상태 확인 : status 
+파일 추가: add    . 붙이면 전체 
+변경사항 커밋: commit , 첫 줄은 제목 한 칸 띄우고 내용쓰기
+히스토리 조회 : log , $ git log --decorate --graph --all --oneline (간단)
+리모트 저장소 : 추가-> remote add orgin ______
+         PUSH ->  push --set --upstream origin master
+                   가져오기 -> pull
+파일 무시 : gitignore 
+</pre>
+
+</body>
+</html>

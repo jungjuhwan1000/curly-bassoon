@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>git</title>
+	</head>
+	<body>
+		<h1>Git</h1>
+		<h2>git이란? - git을 사용하는 이유</h2>
+		<p>*버전 관리 시스템인 git을 사용함으로써 파일 변화를 시간에 따라 기록했다가 나중에
+		<br>특정 시점의 버전을 다시 꺼내올 수 있다.
+		<br>*분산 버전 관리 시스템(DVCS)로 동시에 다양한 그룹과 다양한 방법으로 협업할 수
+		<br>있다.
+		<br>*계층 모델 같은 중앙집중식 시스템으로는 할 수 없는 워크플로를 다양하게 사용할 수
+		<br>있다.</p>
+		<hr>
+		
+		<h2>프로젝트 3단계</h2>
+		<h4>- Working directory란</h4>
+		<p>실제 작업이 일어나는 곳
+		<br>최초 git directory에서 checkout을 받아 작업하게 되는 공간
+		<br>Staging area로 Stage Fixes</p>
+		<h4>- Staging Area란</h4>
+		<p>추가되거나 변경된 사항의 리스트가 저장되는 공간
+		<br>커밋을 하면 고유 번호 (SHA-1 해시)할당됨
+		<br>git directory로 Commit</p>
+		<h4>- Git directory란</h4>
+		<p>git이 프로젝트의 메타데이터와 객체 데이터베이스를 저장하는 곳
+		<br>Working Directory로 Checkout the project</p>
+		<hr>
+		
+		<h2>git 최초 설정</h2>
+		<h4>- 사용자 정보</h4>
+		<p>$ git config --global user.name "John Doe“
+		<br>$ git config --global user.email johndoe@example.com</p>
+		<h4>- For Windows</h4>
+		<h5>*편집기 설정</h5>
+		<p>$ git config --global core.editor "'/c/Program Files (x86)
+		<br>/Notepad++/notepad++.exe' -multiInst -notabbar
+		<br>-nosession -noPlugin“</p>
+		<h5>*자동 줄바꿈 설정</h5>
+		<p>$ git config --global core.autocrlf true</p>
+		<h5>*원격 저장소와 로컬 저장소 동기화</h5>
+		<p>$ git config -- global fetch.prune true</p>
+		<hr>
+		
+		<h2>명령어</h2>
+		<h4>설정이 잘 되었는지 확인</h4>
+		<p>$ git config --global --list</p>
+		<h4>Git 내부명령어 확인</h4>
+		<p>$ git</p>
+		<h4>Git 저장소 만들기</h4>
+		<p>기존 디렉토리를 Git 저장소로 만들기 : $ git init</p>
+		<p>기존 저장소를 Clone 하기 : $ git clone https://github.com/
+		<br>WondyFromCanada/gitProject.git</p>
+		<h4>저장소에 저장하기</h4>
+		<p>파일 상태 확인하기 : $ git status</p>
+		<p>Modified 상태의 파일을 Stage 하기: $ git add.</p>
+		<p>변경사항 커밋하기 : $ git commit</p>
+		<h4>커밋 히스토리 조회하기</h4>
+		<p>$ git log</p>
+		<p>$ git log --decorate --graph --all --oneline</p>
+		<h4>리모트 저장소</h4>
+		<p>리모트 저장소 추가하기 : $ git remote add origin
+		<br>https://github.com/WondyFromCanada/gitProject.gitProject.git </p>
+		<p>리모트 저장소에 Push 하기 : $ git push --set --upstream origin master</p>
+		<h4>파일 무시하기</h4>
+		<p>$ gitignore</p>
+		<h4>리모트 저장소에서 가지고 오기</h4>
+		<p>$ git pull</p>
+	</body>
+</html>

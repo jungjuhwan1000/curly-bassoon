@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>회원가입 양식</title>
+	</head>
+	<body>
+		<p>ID: <input type="text" name="my_name"></p>
+		<p>Password: <input type="password" name="my_pwd"></p>
+		<p>Email: <input type="text" name="my_email"></p>
+		<p>Gender: <input type="radio" name="gender">female
+				<input type="radio" name="gender">male</p>
+		<p>Favorite place: <input type="checkbox" name="place">beach
+					 <input type="checkbox" name="place">mountain
+					 <input type="checkbox" name="place">valley</p>
+		<p>Occupied area: 
+			<select name="area">
+    			<option value="">area</option>
+    			<option value="Seoul">Seoul</option>
+    			<option value="Incheon">Incheon</option>
+    			<option value="Daejeon">Daejeon</option>
+    			<option value="Daegu">Daegu</option>
+    			<option value="Busan">Busan</option>
+    			<option value="Ulsan">Ulsan</option>
+    			<option value="Jeju">Jeju</option>
+			</select></p>
+		<form action="/action_page.php">Favorite color:
+  			<input type="color" name="favcolor" value="#ff0000"></form>
+		<form action="/action_page.php"> Birthday:
+			<input type="date" name="bday" max="2010-12-31"></form>
+		<input type="submit" value="Registration">
+	</body>
+</html>

@@ -5,38 +5,84 @@
 <title>git정리</title>
 </head>
 <body>
-<h2>2019-12-30-2019-12-31 Git 교육 정리</h2>
+<h2>Git</h2>
 <h4> Git이란? </h4>
-<pre>버전관리 시스템
+<pre>•버전관리 시스템
 (파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템)   
 Git은 분산 버전 관리 시스템(DVCS) : 원격저장소, 로컬저장소 PUSH하고 PULL사용   
 
- Git : Working Directory -> Staging Area -> .git directory    * commit에서 고유번호 해시가 할당된다.
+•Git : Working Directory -> Staging Area -> .git directory    * commit에서 고유번호 해시가 할당된다.
  Working Directory에서 파일 수정, Staging Area에 파일 추가 , Staging Area에서 파일 commit
  </pre>
 <h4>Git 최초 설정 </h4> 
 <pre>
-사용자 정보: git config --global user.name "sumin" 
-          git config --global user.email johndoe@example.com 
+•사용자 정보: git config --global user.name "sumin" 
+         git config --global user.email johndoe@example.com 
           
           편집기, 자동 줄바꿈, 원격저장소와 로컬저장소 동기화
               설정확인 : git config --global --list </pre>
               
 <h4>명령어</h4>
 <pre>
-저장소만들기
+•저장소만들기
 -init 사용해서 만들기 (기존 디렉토리)
 -clone사용해서 저장소 만들기
 
-파일 상태 확인 : status 
-파일 추가: add    . 붙이면 전체 
-변경사항 커밋: commit , 첫 줄은 제목 한 칸 띄우고 내용쓰기
-히스토리 조회 : log , $ git log --decorate --graph --all --oneline (간단)
-리모트 저장소 : 추가-> remote add orgin ______
+•파일 상태 확인 : status 
+•파일 추가: add    . 붙이면 전체 
+•변경사항 커밋: commit , 첫 줄은 제목 한 칸 띄우고 내용쓰기
+•히스토리 조회 : log , $ git log --decorate --graph --all --oneline (간단)
+•리모트 저장소 : 추가-> remote add orgin ______
          PUSH ->  push --set --upstream origin master
                    가져오기 -> pull
-파일 무시 : gitignore 
+•파일 무시 : gitignore 
+</pre>
+<hr>
+<pre>
+•커밋 되돌리기
+-commit 취소, 해당 파일들은 staged 상태로 워킹 디렉터리에 보존 : $git reset --soft HEAD^ (메시시 뿐 아니라 파일 변경도 가능)
+-commit을 취소, 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존 : $ git reset --mixed HEAD^ 
+                                               $ git reset HEAD^                  *HEAD : 제일 최근 것
+                                              $ git reset HEAD~2 => 마지막 2개의 커밋 취소
+-commit을 취소, 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제 : $ git reset --hard HEAD^
+
+
+•커밋 메세지 변경하기 : $ git commit --amend  
+
+•리모트 저장소에서 가져오기
+-저장소에서 데이터를 로컬로 가져옴 : $ git fetch origin                 
+-원격 저장소의 master 브랜치를 병합: $ git merge origin/master
+                                  ⇓
+ 원격 저장소의 내용을 가져와 자동으로 병합 : $ git pull
+</pre>
+<h4>Git 브랜치</h4>
+<pre>
+•현재 존재하는 브랜치 확인 : $ git branch
+•새로운 브랜치 생성: $ git branch 브랜치명
+•브랜치 이동: $ git checkout 브랜치명                                          *git checkout: 커밋 되돌리기도 가능
+•브랜치 생성 동시에 이동 : $ git checkout -b 브랜치명 
+•브랜치 삭제 : $ git branch -d 브랜치명 
 </pre>
 
+<h4>Merge</h4>
+<pre>
+• $ git merge 브랜치명
+ *합칠 브랜치에서 합쳐질 브랜치를 merge
+ 
+•Merge 할 때 발생하는 상황
+- Fast-Forward : 
+<img src="http://localhost:8080/gp/image/456.jpg"  alt="456" width="400" height="150">
+*알아서 잘 됨
+
+- Three-way Merge : 
+<img src="http://localhost:8080/gp/image/123.jpg"  alt="123" width="400" height="150">
+*두 브랜치의 겹치는 부분까지 가서 merge함. merge commit 만들어짐.
+
+•충돌
+Merge 하려는 두 브랜치에서 같은 파일의 같은 부분을 수정하고 merge 할 때 충돌 발생
+html파일에서 <<<, >>> 있는 부분 수정
+
+*누가 충돌을 발생시켰는지 확인하고 싶을 때 : $ git blame 파일명
+ </pre>
 </body>
 </html>

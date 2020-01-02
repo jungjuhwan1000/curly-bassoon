@@ -2,10 +2,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Git</title>
+<style>
+.1{width:300px; height:300px;}
+</style>
 </head>
 <body>
-
 <h1>Git</h1>
 <h3>Git이란?</h3>
 <p>-버전관리 시스템, 파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템</p>
@@ -16,17 +18,58 @@
 <p>-Working Directory에서 작업한 파일을  Staging Area로 파일을 보내 commit을 할 수 있는 상태로 만든다.</p>
 <p>-Staging Area에서 commit을 해서 .git directory로 보낸다.</p>
 <p>-파일을 commit하면 해시가 할당된다</p><br>
-<h3>최초설정</h3>
-<p>-사용자 정보($ git config --global user.name " ", $ git config --global user.email ~)</p>
-<p>-For Windows(편집기 설정: core.edit, 자동 줄바꿈 설정: autocrlf true, 원격 저장소와 로컬 저장소 동기화: prune true)</p>
-<p>-설정이 잘 되었는지 확인($ git config --global --list)</p>
-<p>-Git 내부명령어 확인($ git)</p><br>
+<h3>Git 최초설정</h3>
+<h4>사용자 정보($ git config --global user.name " ", $ git config --global user.email ~)</h4>
+<h4>For Windows</h4>
+<p>-편집기 설정: core.edit</p>
+<p>-자동 줄바꿈 설정: autocrlf true</p>
+<p>-원격 저장소와 로컬 저장소 동기화: prune true)</p>
+<h4>설정이 잘 되었는지 확인($ git config --global --list)</h4>
+<h4>Git 내부명령어 확인($ git)</h4><br>
 <h3>프로젝트 관리</h3>
-<p>-Git저장소 만들기: 기존 디렉토리를 Git저장소로 만든다($ git init), 기존 저장소를 Clone한다($ git clone)</p>
-<p>-저장소에 저장하기: 파일 상태 확인하기($ git status), Modified 상태의 파일을 Stage하기($ git add), 파일 상태 확인하기($ git status), 변경사항 커밋하기($ git commit)</p>
-<p>-커밋 히스토리 조회하기($ git log)</p>
-<p>-리모트 저장소: 리모트 저장소 추가하기($ git remote add origin), 리모트 저장소에 Push하기($ git push --set --upstream origin master)</p>
+<h4>Git저장소 만들기</h4>
+<p>-기존 디렉토리를 Git저장소로 만든다($ git init)</p>
+<p>-기존 저장소를 Clone한다($ git clone)</p>
 <p>-파일 무시하기($ gitignore)</p>
-<p>-리모트 저장소에서 가지고 오기($ git pull)</p>
+<h4>저장소에 저장하기</h4>
+<p>-파일 상태 확인하기($ git status)</p>
+<p>-Modified 상태의 파일을 Stage하기($ git add)</p>
+<p>-파일 상태 확인하기($ git status)</p>
+<p>-변경사항 커밋하기($ git commit)</p>
+<h4>커밋 히스토리 조회하기($ git log)</h4>
+<h4>커밋 되돌리기</h4>
+<p>-commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존($ git reset --soft HEAD^)</p>
+<p>-commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존($ git reset --mixed HEAD^, $ git reset HEAD^, $ git reset HEAD~2 :마지막 2개의 commit을 취소)</p>
+<p>-commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제($ git reset --hard HEAD^)</p>
+<p>-커밋 메시지 변경하기($ git commit --amend)</p>
+<h4>리모트 저장소</h4>
+<p>-리모트 저장소 추가하기($ git remote add origin)</p>
+<p>-리모트 저장소에 Push하기($ git push --set --upstream origin master)</p>
+<h4>리모트 저장소에서 가지고 오기($ git pull)</h4>
+<h4>리모트 저장소</h4>
+<p>-리모트 저장소 추가하기($ git remote add origin ~</p>
+<p>-리모트 저장소에 push하기($ git push --set-upstream origin master)</p>
+<h4>리모트 저장소에서 가지고 오기</h4>
+<p>-원격 저장소에서 데이터를 로컬로 가져옴($ git fetch origin)-</p>
+<p>-원격 저장소의 master 브랜치를 병합($ git merge origin/master)</p>
+<p>=> 원격 저장소의 내용을 가져와 자동으로 병합($ git pull)</p>
+<h4>Git 브랜치</h4>
+<p>-현재 로컬에 존재하는 브랜치 확인하기($ git branch)</p>
+<p>-새로운 브랜치 생성하기($ git branch 브랜치명)</p>
+<p>-브랜치 이동하기($ git checkout 브랜치명)</p>
+<p>-브랜치 생성과 동시에 이동하기($ git checkout -b 브랜치명)</p>
+<p>-브랜치 삭제($ git branch -d 브랜치명)</p>
+<h4>Merge의 기초</h4>
+<p>-Merge: 합칠 브랜치에서 합쳐질 브랜치를 merge($ git merge 브랜치명)</p>
+<p>-Merge 할 때 발생하는 상황
+<p>1.Fast-Forward</p>
+<div class="1">
+<img src="http://localhost:8080/gp/image/2.jpg">
+</div><br>
+<p>2.Three-way Merge</p>
+<div class="1">
+<img src="http://localhost:8080/gp/image/1.jpg">
+</div>
+<p>-Conflict: Merge 하려는 두 브랜치에서 같은 파일의 같은 부분을 수정하고 merge할 때 충돌 발생 , 누가 충돌을 발생시켰는지 확인하고 싶을 때($ git blame 파일명)</p>
 </body>
 </html>

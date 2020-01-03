@@ -3,37 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+h1 {
+	text-align: center;
+}
+
+#form {
+    margin-left: 88%;
+}
+#email,#pwd {
+    width: 200px;
+}
+#menu {
+	padding: 0 38%;
+}
+
+#content {
+	text-align: center;
+}
+</style>
 </head>
 <body>
 	<h1>My First Git Project</h1>
 	<br>
-	<h3><a href="/gp/views/gitProject.html">My First Git Project</a></h3>
+	<div id="form">
+		<form action="/action_page.php">
+			<div class="form-group">
+				<label for="email">ID :</label> <input type="text"
+					class="form-control" id="email">
+			</div>
+			<div class="form-group">
+				<label for="pwd">Password :</label> <input type="password"
+					class="form-control" id="pwd">
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox"> Remember me</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
 	<br>
-	<hr>
+
+	<div id="menu">
+		<nav class="navbar">
+			<div class="container-fluid" style="text-align: center;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/gp/views/gitProject.html">My
+						First Git Project</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">남희영 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/gp/views/h1.html">실습 1</a></li>
+							<li><a href="/gp/views/h2.html">실습 2</a></li>
+							<li><a href="/gp/views/h3.html">실습 3</a></li>
+							<li><a href="/gp/views/h4.html">실습 4</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">변수민 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/gp/views/my1.html">실습 1</a></li>
+							<li><a href="/gp/views/my2.html">실습 2</a></li>
+							<li><a href="/gp/views/my3.html">실습 3</a></li>
+							<li><a href="/gp/views/my4.html">실습 4</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">오장현 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/gp/views/Study.html">실습 1</a></li>
+							<li><a href="/gp/views/Member.html">실습 2</a></li>
+							<li><a href="/gp/views/Picture.html">실습 3</a></li>
+							<li><a href="/gp/views/html4.html">실습 4</a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 	<br>
-	
-	<h3>1. 남희영</h3>
-	<ul>
-	<li><a href="/gp/views/h1.html">실습 1</a></li>
-	<li><a href="/gp/views/h2.html">실습 2</a></li>
-	<li><a href="/gp/views/h3.html">실습 3</a></li>
-	<li><a href="/gp/views/h4.html">실습 4</a></li>
-	</ul>
-	
-	<h3>2. 변수민</h3>
-	<ul>
-	<li><a href="/gp/views/my1.html">실습 1</a></li>
-	<li><a href="/gp/views/my2.html">실습 2</a></li>
-	<li><a href="/gp/views/my3.html">실습 3</a></li>
-	<li><a href="/gp/views/my4.html">실습 4</a></li>
-	</ul>
-	
-	<h3>3. 오장현</h3>
-	<ul>
-	<li><a href="/gp/views/Study.html">실습 1</a></li>
-	<li><a href="/gp/views/Member.html">실습 2</a></li>
-	<li><a href="/gp/views/Picture.html">실습 3</a></li>
-	<li><a href="/gp/views/html4.html">실습 4</a></li>
-	</ul>
+
+	<div id="content">
+		<iframe width="560" height="315"
+			src="https://www.youtube.com/embed/Nm3YrpH1R9Q" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	</div>
 </body>
 </html>

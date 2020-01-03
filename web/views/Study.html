@@ -64,12 +64,23 @@
 <p>-Merge 할 때 발생하는 상황
 <p>1.Fast-Forward</p>
 <div class="1">
-<img src="http://localhost:8080/gp/image/1.jpg">
+<img src="http://localhost:8080/gp/image/ojh/1.jpg">
 </div><br>
 <p>2.Three-way Merge</p>
 <div class="1">
-<img src="http://localhost:8080/gp/image/2.jpg">
+<img src="http://localhost:8080/gp/image/ojh/2.jpg">
 </div>
 <p>-Conflict: Merge 하려는 두 브랜치에서 같은 파일의 같은 부분을 수정하고 merge할 때 충돌 발생 , 누가 충돌을 발생시켰는지 확인하고 싶을 때($ git blame 파일명)</p>
+<h4>Tag</h4>
+<p>-태그 조회하기($ git tag)</p>
+<p>-태그 붙이기 1. LightWeight($ git tag 태그명):특정 커밋에 대한 포인터, 2. Annotated($ git tag -a 태그명): 태그를 만든 사람 이름, 이메일, 태그를 만든 날짜, 태그 메시지 저장</p>
+<p>-태그 정보 확인하기($ git show 태그명): LightWeight(커밋 정보만 확인 가능), Annotated(태그 정보와 커밋 모두 확인 가능)</p>
+<p>-태그 공유하기: ($ git push origin 태그명): 태그를 이용하여 checkout도 가능, ($ git push origin --tags)</p>
+<p>=>태그를 만들면 서버에 별도로 Push해야 함(자동으로 리모트 서버에 태그를 전송하지 않음)</p>
+<h4>Stashing</h4>
+<p>-수정하던 것을 스택에 저장($ git stash, $ git stash save 이름)</p>
+<p>-저장한 Stash 목록 확인하기($ git stash list)</p>
+<p>-저장한 Stash 불러오기($ git stash apply 이름, $ git stash drop 아이디)</p>
+<p>=> $ git stash pop</p>
 </body>
 </html>

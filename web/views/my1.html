@@ -71,11 +71,11 @@ Git은 분산 버전 관리 시스템(DVCS) : 원격저장소, 로컬저장소 P
  
 •Merge 할 때 발생하는 상황
 - Fast-Forward : 
-<img src="http://localhost:8080/gp/image/456.jpg"  alt="456" width="400" height="150">
+<img src="http://localhost:8080/gp/image/sm/456.jpg"  alt="456" width="400" height="150">
 *알아서 잘 됨
 
 - Three-way Merge : 
-<img src="http://localhost:8080/gp/image/123.jpg"  alt="123" width="400" height="150">
+<img src="http://localhost:8080/gp/image/sm/123.jpg"  alt="123" width="400" height="150">
 *두 브랜치의 겹치는 부분까지 가서 merge함. merge commit 만들어짐.
 
 •충돌
@@ -83,6 +83,36 @@ Merge 하려는 두 브랜치에서 같은 파일의 같은 부분을 수정하�
 html파일에서 <<<, >>> 있는 부분 수정
 
 *누가 충돌을 발생시켰는지 확인하고 싶을 때 : $ git blame 파일명
+ </pre>
+ <hr>
+ <h4>Tag</h4>
+ <pre>
+ •태그 조회 : $ git tag 
+ 
+ •태그 붙이기
+ -Lightweight : 특정 커밋에 대한 포인터,  $ git tag 태그명  
+ -Annotated : 태그를 만든 사람 이름, 이메일, 태그를 만든 날짜, 태그 메시지 저장,  $ git tag -a 태그명 
+
+ •태그 정보 확인 : $ git show 태그명 
+     -Lightweight : 커밋 정보만 확인 가능 
+     -Annotated :  태그 정보와 커밋 정보 모두 확인 가능
+ 
+ •태그 공유                      *별도로  push해야 함
+ -$ git push origin 태그명              
+ -$ git push origin --tags    
+ </pre>
+ <h4>Stash</h4>
+ <pre>
+ •수정하던 것을 스택에 저장 : $ git stash 
+                              $ git stash save 이름
+         
+ •저장한 Stash 목록 확인 : $ git stash list
+ 
+ •저장한 Stash 불러오기 
+ -$ git stash apply 이름           -- index 붙이면  stage상태로 올라감
+ -$ git stash drop 아이디
+            ⇓
+   $ git stash pop
  </pre>
 </body>
 </html>
